@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <title>Como é o Mundo das Plantas e Animais?</title>
+    <link rel="stylesheet" href="conteúdos.css">
+</head>
+<body id="plantinhas">
+
+    <div><button class="back-btn-iniciop" onclick="window.location.href='ciencias.html';">&#8592;</button></div>
+
+    <div class="content-planta">
+        <h1 class="titulo-planta">Como é o Mundo das Plantas e Animais?</h1>
+        <p class="conteudo-planta">  Vamos aprender sobre as plantas e os animais que fazem parte do nosso dia a dia. Vamos descobrir como eles são, onde vivem e como se relacionam com o ambiente ao redor.</p>
+
+        <section class="selection-planta">
+            <h2 class="section-planta-title">Plantas</h2>
+            
+            <ul class="examples-list-planta">
+                <p class="examples-planta">Características</p>
+                <li>Tamanho: algumas são bem pequenas, como o trevo, e outras são gigantes, como as árvores.</li>
+                <li>Forma: podem ter formas variadas, como folhas largas ou fininhas, troncos grossos ou finos.</li>
+                <li>Cor: as plantas têm cores diferentes, como o verde das folhas e o colorido das flores.</li>
+                <li>Fases da Vida: elas nascem de sementes, crescem, florescem e, algumas, dão frutos.</li>
+                <li>Local onde se Desenvolvem: podem crescer em jardins, florestas, parques e até dentro de casa.</li>
+            </ul>           
+        </section>
+ 
+        <div class="plantas" id="mundo">
+            <img src="Fotos/planta 1.jpeg" alt="Imagem de mapa" class="img-ajustada-mapa">
+
+            <img src="Fotos/planta 2.jpg" alt="Imagem de mapa" class="img-ajustada-mapa">
+        </div>
+
+        <p>As plantas são muito importantes porque produzem o oxigênio que respiramos e servem de alimento para muitos seres vivos. Elas também ajudam a manter o clima equilibrado, protegem o solo contra a erosão e oferecem abrigo para vários animais. Além disso, são usadas para fazer remédios, roupas e muitas outras coisas que usamos no dia a dia. Sem as plantas, a vida na Terra não seria possível!</p>
+
+    
+        
+        <section class="selection-planta">
+            <h2 class="section-planta-title">Animais</h2>
+          
+           
+            <ul class="examples-list-planta">
+                <p class="examples-planta">Características:</p>
+                <li>Tamanho: podem ser pequenos como uma formiga ou grandes como um elefante.</li>
+                <li>Forma: alguns têm penas, outros têm escamas, e outros ainda têm pelo.</li>
+                <li>Cor: os animais podem ter cores diversas, como o marrom do cachorro ou o colorido dos papagaios.</li>
+                <li>Fases da Vida: nascem, crescem, e cada espécie tem um jeito diferente de se desenvolver.</li>
+                <li>Local onde se Desenvolvem: vivem em diversos lugares, como na água, no ar, em árvores ou no chão.</li>
+                 
+            </ul>
+        </section>
+                <div class="plantas" id="mundo">
+            <img src="Fotos/animais.jpeg" alt="Imagem de mapa" class="img-ajustada-mapa">
+        </div>
+
+        <p>Os animais são importantes porque desempenham papéis essenciais nos ecossistemas e na vida do planeta. Eles ajudam a manter o equilíbrio ambiental, como polinizadores, dispersores de sementes e controladores de populações de outras espécies. Além disso, muitos animais fornecem recursos como alimentos, materiais e até medicamentos para os seres humanos. Eles também são fundamentais para a biodiversidade, contribuindo para a saúde dos habitats. Além de sua utilidade, os animais enriquecem nossas vidas, inspirando cultura, arte e ciência, além de promoverem conexões emocionais profundas.</p>
+        
+
+        <div class="quiz-container">
+            <h1>Vamos lembrar para Aprender?</h1>
+            <div class="question">
+                <p>O que as plantas produzem que é muito importante para os animais?</p>
+                <div class="options">
+                    <div class="option" onclick="checkAnswer(this, false)">
+                        <img src="Fotos/agua.jpeg" alt="Gato">
+                    </div>
+                    <div class="option" onclick="checkAnswer(this, true)">
+                        <img src="Fotos/ar.jpg" alt="Leão">
+                    </div>
+                    <div class="option" onclick="checkAnswer(this, false)">
+                        <img src="Fotos/luz.jpeg" alt="Cachorro">
+                    </div>
+                    <div class="option" onclick="checkAnswer(this, false)">
+                        <img src="Fotos/solo.jpeg" alt="Coelho">
+                    </div>
+                </div>
+            </div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+        <script src="script.js"></script>
+
+    </div>
+</body>
+</html>

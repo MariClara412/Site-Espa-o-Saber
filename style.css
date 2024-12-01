@@ -1,0 +1,1091 @@
+/* Ajustes gerais*/
+#home-page {
+    font-family:'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url('Fotos/Fundo\ simples.jpg'); 
+    background-size: cover; 
+    background-repeat: repeat; 
+    height: 400px;
+    width: 100%; 
+    overflow-x: hidden;
+}
+
+
+
+/* ESTILO DO CABEÇALHO */
+
+
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    padding: 6px 4%;
+    background-color: #0a0a23; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.content {
+    margin-top: 100px; 
+}
+
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 4%; 
+}
+
+.logo {
+    margin-right: auto; 
+}
+
+.menu-desktop {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+.menu-desktop ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px; 
+}
+
+.menu-desktop ul li {
+    display: inline-block;
+}
+
+header nav.menu-desktop ul li a {
+    color: #9d92ff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav.menu-desktop ul li a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+header nav ul 
+{
+     list-style-type: none;
+      display: flex; 
+      justify-content: center ; 
+       flex-grow: 1;  
+    }
+
+    header nav ul li
+     {
+        display: inline-block; 
+        padding: 0 20px; 
+     }
+
+     @media (max-width: 768px) {
+       
+        .menu-desktop {
+            display: none;
+        }
+}
+/* MENU MOBILE */
+.btn-abrir-menu i {
+    color: #fff;
+    font-size: 40px;
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 999999;
+}
+
+.menu-mobile {
+    display: none; 
+    background-color: #0a0a23; 
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%; 
+    overflow: hidden;
+    transition: 0.3s width ease; 
+    flex-direction: column; 
+    padding-top: 60px; 
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%; 
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block; 
+}
+
+.menu-mobile .btn-fechar-menu {
+    padding: 20px 5%;
+    text-align: right;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000000; 
+}
+
+.menu-mobile .btn-fechar-menu i {
+    font-size: 40px;
+    color: #fff;
+}
+
+.menu-mobile nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    text-align: left; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.menu-mobile nav ul li {
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.menu-mobile nav ul li a {
+    
+    display: block;
+    font-size: 22px;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease;
+    color: #9d92ff;
+    text-decoration: none;
+   
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: rgb(34, 45, 104); 
+}
+
+
+@media (min-width: 769px) {
+    .menu-mobile {
+        display: none;
+    }
+
+    .btn-abrir-menu {
+        display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-desktop {
+        display: none; /
+    }
+
+    .menu-mobile {
+        display: block; 
+    }
+
+    .btn-abrir-menu {
+        display: block;
+    }
+}
+
+
+
+
+/* PLANETAS MATÉRIAS */
+
+.content {
+    margin-top: 160px; 
+}
+
+.planetas { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    gap: 30px; 
+    margin-top: 80px;
+    padding: 20px; 
+}
+
+.planetas .planeta { 
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.planeta img {
+    max-width: 100%;
+}
+
+
+.planeta.portugues img {
+    height: 220px;
+    width: 190px;
+    order: 1; 
+}
+
+.planeta.matematica img {
+    height: 200px;
+    width: auto;
+    order: 2;
+}
+
+.planeta.ciencias img {
+    height: 235px;
+    width: 220px;
+    order: 3;
+}
+
+.planeta.geografia img {
+    height: 280px;
+    width: 200px;
+    order: 4;
+}
+
+.planeta.historia img {
+    height: 215px;
+    width: 215px;
+    order: 5;
+}
+
+.planetas .planeta:hover { 
+    transform: scale(1.2); 
+}
+
+
+@media (max-width: 768px) {
+    .planetas {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    .planeta img {
+        height: auto; 
+        width: 70%; 
+    }
+
+    
+    .planeta.portugues {
+        order: 1;
+    }
+    .planeta.matematica {
+        order: 2;
+    }
+    .planeta.ciencias {
+        order: 3;
+    }
+    .planeta.geografia {
+        order: 4;
+    }
+    .planeta.historia {
+        order: 5;
+    }
+}
+
+.foguete-fixo { 
+    position: absolute; 
+    bottom: 20px; 
+    right: 60px; 
+    width: 70px; 
+    transform: rotate(180deg);  
+    animation: flutuar 3s ease-in-out infinite; 
+}
+
+@keyframes flutuar { 
+    0% { 
+        transform: translateY(0) rotate(180deg); 
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg); 
+    }
+    100% { 
+        transform: translateY(0) rotate(180deg); 
+    } 
+}
+
+
+       /* SESSÃO ÚLTIMAS MISSOES */
+.ultimas-missoes {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ultimas-missoes .titulo-PI {
+    color: #fff;
+    padding: auto;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.missao {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    border-radius: 20px;
+    gap: 20px; 
+    border: 2px solid #000;
+    background-color: #b4b4e6;
+    transition: .2s;
+}
+
+.missao:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #ffffff75;
+}
+
+.conteiner {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+}
+
+.conteiner img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.conteiner2 {
+    width: 60%;
+    text-align: left;
+}
+
+.conteiner2 h3 {
+    font-size: 1.3em;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.conteiner2 p {
+    font-size: 0.95em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+
+.btn-continuar-home {
+    background-color: #303f5a;
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.btn-continuar-home:hover {
+    background-color: #6da7eb;
+    box-shadow: 0 0 10px #57439e;
+}
+
+.missao-1 { background-color: #D88585; }
+.missao-2 { background-color: #eec67b; }
+.missao-3 { background-color: #81c784; }
+
+
+@media (max-width: 1024px) {
+    .conteiner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteiner img {
+        width: 80%; 
+    }
+
+    .conteiner2 {
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    .btn-continuar-home {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ultimas-missoes {
+        padding: 10px; 
+    }
+
+    .missao {
+        width: 100%;
+        max-width: 100%; 
+        margin: 10px 0;
+    }
+
+    .conteiner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteiner img {
+        width: 100%; 
+    }
+
+    .conteiner2 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn-continuar-home {
+        width: 80%; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .conteiner img {
+        width: 90%; 
+    }
+
+    .btn-continuar-home {
+        width: 90%; 
+    }
+
+    .missao {
+        margin: 15px 0; 
+    }
+
+    .conteiner2 h3 {
+        font-size: 1.1em; 
+    }
+
+    .conteiner2 p {
+        font-size: 0.9em; 
+    }
+}
+
+
+/*BOTÕES DE ACESSIBILIDADE*/
+
+.accessibility-buttons {
+    position: fixed;
+    bottom: 10px; 
+    right: 10px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .accessibility-buttons button {
+    background-color: #0a0a23;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .accessibility-buttons button:hover {
+    background-color: #1c1c3b;
+  }
+  
+  body.high-contrast {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  body.high-contrast a {
+    color: #0ff;
+  }
+  
+  body.high-contrast button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #0ff;
+  }
+
+    /* MASCOTE */
+.mascote {
+    position: absolute;
+    bottom: 3%; 
+    left: 3%; 
+    width: 15vw; 
+    max-width: 250px; 
+    cursor: pointer;
+    animation: flutuar 3s ease-in-out infinite; 
+}
+
+.mascote img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mascote {
+        width: 20vw; 
+        max-width: 200px; 
+        bottom: 5%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .mascote {
+        width: 30vw;
+        max-width: 180px; 
+        bottom: 5%; 
+    }
+}
+
+        
+        
+          /*RODAPÉ*/
+          
+          
+        footer {
+            background-color: #0a0a23;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; 
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; 
+        }
+        
+        .footer-menu {
+            display: flex;
+            gap: 20px; 
+        }
+        
+        .footer-menu a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-menu a:hover {
+            color: #bdc8fa;
+        }
+       
+       
+        /* Responsividade */
+
+
+@media screen and (max-width: 768px) {
+    
+    .mascote {
+        width: 70%; 
+        left: 10%; 
+    }
+
+    footer {
+        padding: 10px; 
+    }
+
+    .footer-menu {
+        flex-direction: column; 
+    }
+
+    .footer-menu a {
+        margin: 5px 0; 
+    }
+
+   
+   }
+   
+
+
+
+
+
+
+
+
+/* Estilo para a seção 'Sobre' */
+
+.sobre-site {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-image: url(Fotos/Fundo\ simples.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 100px;
+    overflow-x: hidden;
+}
+
+.sobre {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+.conteúdo div {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.conteúdo div h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ece3ff; 
+}
+
+
+.conteúdo div p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dcdcdc; 
+}
+
+
+@media (max-width: 768px) {
+    .sobre {
+        padding: 30px 15px;
+    }
+
+    .conteúdo div {
+        padding: 15px;
+    }
+
+    .conteúdo div h2 {
+        font-size: 20px;
+    }
+
+    .conteúdo div p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sobre {
+        padding: 20px 10px;
+    }
+
+    .conteúdo div {
+        padding: 10px;
+    }
+
+    .conteúdo div h2 {
+        font-size: 18px;
+    }
+
+    .conteúdo div p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* CADASTRO */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cadastro {
+    font-family: 'Montserrat Alternates', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Fotos/Fundo\ simples\ cadastro.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+   
+
+}
+
+#contato-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 20px;
+     margin-bottom: 20px;
+}
+
+.interface-cadastro {
+    background-color: transparent;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.titulo-cadastro {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.titulo span {
+    color: #fff;
+}
+
+p .cadastro {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 1.2em; 
+    font-weight: 400; 
+    line-height: 1.5; 
+}
+
+.campo-form-cadastro {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+
+.btn-enviar-cadastro-c {
+    background-color: #303f5a;
+    color: #ece3ff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar-cadastro:hover {
+    background-color: #357abd;
+}
+
+
+.mensagem {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+
+.esqueceu-senha {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #ece3ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.esqueceu-senha:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .interface-cadastro {
+        padding: 15px 20px; 
+        max-width: 90%; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    .titulo-cadastro {
+        font-size: 30px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    .btn-enviar-cadastro-c {
+        font-size: 0.9em; 
+        padding: 8px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .interface-cadastro {
+        padding: 10px 15px;
+        max-width: 95%; 
+    }
+
+    .titulo-cadastro {
+        font-size: 24px; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    .btn-enviar-cadastro-c {
+        font-size: 0.8em; 
+    }
+}
+
+
+  /*MISSÕES DESEMPENHADAS*/
+
+.missoes {
+    padding-top: 120px;
+    background-image: url(Fotos/Fundo\ simples.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+  
+  /*DESENVOLVENDO*/
+
+  .desenvolvendo {
+    background-image: url(Fotos/Fundo\ simples.jpg);
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; 
+    background-size: cover; 
+    background-repeat: repeat; 
+    height: 100vh; 
+    width: 100%; 
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; /
+}
+
+.Metonauta-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; 
+    animation: flutuar 3s ease-in-out infinite; 
+    margin-top: 50px; 
+}
+
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .Metonauta-image img {
+        margin-top: 100px; 
+    }
+}
+
+
+
+
+/*AJUDA*/
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Fotos/Fundo\ simples.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: #fff;
+   
+}
+
+.ajuda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 20px;
+    padding-top: 130px;
+}
+
+.ajuda-container {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    
+}
+
+.titulo-ajuda {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.descricao-ajuda {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #dcdcdc;
+}
+
+
+.ajuda-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pergunta {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pergunta h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ece3ff;
+}
+
+.pergunta p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+
+@media (max-width: 768px) {
+    .titulo-ajuda {
+        font-size: 28px;
+    }
+
+    .descricao-ajuda {
+        font-size: 16px;
+    }
+
+    .pergunta h2 {
+        font-size: 20px;
+    }
+
+    .pergunta p {
+        font-size: 14px;
+    }
+}
+
+                    
+        
+        
